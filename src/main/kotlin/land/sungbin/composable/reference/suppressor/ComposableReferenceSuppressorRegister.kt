@@ -6,7 +6,7 @@
  */
 
 @file:Suppress(
-    "unused",
+    "unused"
 )
 
 package land.sungbin.composable.reference.suppressor
@@ -20,11 +20,11 @@ import org.jetbrains.kotlin.config.CompilerConfiguration
 class ComposableReferenceSuppressorRegister : ComponentRegistrar {
     override fun registerProjectComponents(
         project: MockProject,
-        configuration: CompilerConfiguration,
+        configuration: CompilerConfiguration
     ) {
         ComposeDiagnosticSuppressor.registerExtension(
             project = project,
-            extension = ComposeDiagnosticSuppressor(),
+            extension = ComposeDiagnosticSuppressor()
         )
     }
 }
