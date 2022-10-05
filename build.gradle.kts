@@ -17,13 +17,14 @@ repositories {
     mavenCentral()
     maven {
         url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-        name = "Compose for Desktop DEV"
     }
 }
 
+// [The latest version of Compose Compiler]
+// https://maven.pkg.jetbrains.space/public/p/compose/dev/org/jetbrains/compose/compiler/compiler/
 dependencies {
     compileOnly("org.jetbrains.kotlin:kotlin-compiler-embeddable:1.7.20")
-    implementation("org.jetbrains.compose.compiler:compiler:1.3.0-alpha01")
+    implementation("org.jetbrains.compose.compiler:compiler:1.3.2-alpha01")
     compileOnly("com.google.auto.service:auto-service:1.0.1")
     kapt("com.google.auto.service:auto-service:1.0.1")
 }
