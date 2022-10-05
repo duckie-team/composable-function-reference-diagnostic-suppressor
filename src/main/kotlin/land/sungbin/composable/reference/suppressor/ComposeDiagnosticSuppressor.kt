@@ -5,7 +5,9 @@
  * Please see full license: https://github.com/duckie-team/composable-function-reference-diagnostic-suppressor/blob/main/LICENSE
  */
 
-@file:Suppress("DEPRECATION")
+@file:Suppress(
+    "DEPRECATION",
+)
 
 package land.sungbin.composable.reference.suppressor
 
