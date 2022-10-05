@@ -24,27 +24,14 @@ However, in the case of a Composable function, reference access is blocked.
 Because of this limitation, hardcoding is required to get the name of the Composable function.
 This Kotlin compiler plugin was developed to avoid this limitation.
 
-### Download
+### Download ![maven-central](https://img.shields.io/maven-central/v/land.sungbin/composable.reference.suppressor.plugin?color=lightgreen)
 
 |                                     version                                     |                                   kotlin compatibility                                   |
 |:-------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|
-| ![maven-central](https://img.shields.io/badge/maven--central-1.0.0-brightgreen) | ![kotlin-compatibility](https://img.shields.io/badge/kotlin%20compatibility-1.7.20-blue) |
-
+| ![maven-central](https://img.shields.io/badge/maven--central-1.0.x-brightgreen) | ![kotlin-compatibility](https://img.shields.io/badge/kotlin%20compatibility-1.7.20-blue) |
 
 ```kotlin
-repositories {
-    maven {
-        // we need a dev repository to keep the Compose Compiler always up-to-date.
-        url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    }
-}
-
-dependencies {
-    add(
-        org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME,
-        "land.sungbin:composable.reference.suppressor.plugin:${version}",
-    )
-}
+id("land.sungbin.composable.reference.suppressor") version "$version"
 ```
 
 ### Caveat

@@ -6,7 +6,7 @@
  */
 
 @file:Suppress(
-    "DEPRECATION",
+    "DEPRECATION"
 )
 
 package land.sungbin.composable.reference.suppressor
@@ -22,7 +22,7 @@ open class ComposeDiagnosticSuppressor : DiagnosticSuppressor {
     companion object {
         fun registerExtension(
             project: Project,
-            extension: DiagnosticSuppressor,
+            extension: DiagnosticSuppressor
         ) {
             Extensions
                 .getRootArea()
@@ -32,10 +32,10 @@ open class ComposeDiagnosticSuppressor : DiagnosticSuppressor {
     }
 
     override fun isSuppressed(
-        diagnostic: Diagnostic,
+        diagnostic: Diagnostic
     ) = isSuppressed(
         diagnostic = diagnostic,
-        bindingContext = null,
+        bindingContext = null
     )
 
     // COMPOSABLE_FUNCTION_REFERENCE 타입의 diagnostic 은 항상 무시합니다.
@@ -44,6 +44,6 @@ open class ComposeDiagnosticSuppressor : DiagnosticSuppressor {
     // 보장되므로 추가적으로 해당 diagnostic 의 발생 환경을 검사할 필요가 없습니다.
     override fun isSuppressed(
         diagnostic: Diagnostic,
-        bindingContext: BindingContext?,
+        bindingContext: BindingContext?
     ) = diagnostic.factory == ComposeErrors.COMPOSABLE_FUNCTION_REFERENCE
 }

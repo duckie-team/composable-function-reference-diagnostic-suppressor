@@ -7,7 +7,7 @@
 
 @file:Suppress(
     "unused",
-    "OVERRIDE_DEPRECATION",
+    "OVERRIDE_DEPRECATION"
 )
 
 package land.sungbin.composable.reference.suppressor
@@ -26,7 +26,7 @@ class ComposableReferenceSuppressorProcessor : CommandLineProcessor {
     override fun processOption(
         option: CliOption,
         value: String,
-        configuration: CompilerConfiguration,
+        configuration: CompilerConfiguration
     ) {
         // Do nothing
     }
