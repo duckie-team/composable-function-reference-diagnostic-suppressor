@@ -9,17 +9,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.20"
-    `java-gradle-plugin`
+    kotlin("kapt") version "1.7.20"
     id("com.vanniktech.maven.publish") version "0.22.0"
-}
-
-gradlePlugin {
-    plugins {
-        create("composableReferenceSuppressor") {
-            id = "land.sungbin.composable.reference.suppressor"
-            implementationClass = "land.sungbin.composable.reference.suppressor.ComposableReferenceSuppressorPlugin"
-        }
-    }
 }
 
 repositories {
@@ -27,8 +18,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly(gradleApi())
+    compileOnly("org.jetbrains.kotlin:kotlin-compiler-embeddable:1.7.20")
     implementation("org.jetbrains.compose.compiler:compiler:1.1.1")
+    compileOnly("com.google.auto.service:auto-service:1.0.1")
+    kapt("com.google.auto.service:auto-service:1.0.1")
 }
 
 tasks.test {
