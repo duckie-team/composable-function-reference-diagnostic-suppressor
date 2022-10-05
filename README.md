@@ -31,7 +31,9 @@ This Kotlin compiler plugin was developed to avoid this limitation.
 | ![maven-central](https://img.shields.io/badge/maven--central-1.0.x-brightgreen) | ![kotlin-compatibility](https://img.shields.io/badge/kotlin%20compatibility-1.7.20-blue) |
 
 ```kotlin
-id("land.sungbin.composable.reference.suppressor") version "$version"
+plugins {
+    id("land.sungbin.composable.reference.suppressor") version "$version"
+}
 ```
 
 ### Caveat
