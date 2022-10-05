@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
     compileOnly("org.jetbrains.kotlin:kotlin-compiler-embeddable:1.7.20")
-    implementation("org.jetbrains.compose.compiler:compiler:1.2.0-alpha1-dev578")
+    implementation("org.jetbrains.compose.compiler:compiler:1.3.0-alpha01")
     compileOnly("com.google.auto.service:auto-service:1.0.1")
     kapt("com.google.auto.service:auto-service:1.0.1")
 }
