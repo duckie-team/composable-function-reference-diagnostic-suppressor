@@ -8,11 +8,11 @@ We can use `.name` on reflection via double-clone(`::`) the function to get the 
 
 ```kotlin
 fun main() {
-    println(::hi.name)
+    println(::hi.name) // hi
 }
 
 fun hi() {
-    println("Say bye.") // hi
+    println("Say bye.")
 }
 ```
 
@@ -47,7 +47,7 @@ dependencies {
 }
 ```
 
-### Caveats
+### Caveat
 
 Currently, no IDE support. [[similar issue]](https://github.com/ZacSweers/redacted-compiler-plugin/issues/8)
 
