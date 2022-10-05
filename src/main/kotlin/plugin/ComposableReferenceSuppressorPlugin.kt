@@ -11,18 +11,11 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.maven
-import org.gradle.kotlin.dsl.repositories
 
 class ComposableReferenceSuppressorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
-            repositories {
-                add(
-                    maven(
-                        url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-                    )
-                )
-            }
+            repositories.maven(uri("https://maven.pkg.jetbrains.space/public/p/compose/dev"))
             dependencies {
                 add(
                     org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME,
