@@ -15,11 +15,14 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://androidx.dev/storage/compose-compiler/repository/")
+    }
 }
 
 dependencies {
     compileOnly("org.jetbrains.kotlin:kotlin-compiler-embeddable:1.7.20")
-    implementation("org.jetbrains.compose.compiler:compiler:1.1.1")
+    implementation("org.jetbrains.compose.compiler:compiler:1.2.1-dev-k1.7.10-27cf0868d10")
     compileOnly("com.google.auto.service:auto-service:1.0.1")
     kapt("com.google.auto.service:auto-service:1.0.1")
 }
