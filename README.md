@@ -41,7 +41,7 @@ repositories {
 dependencies {
     add(
         org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME,
-        "land.sungbin:composable.reference.suppressor.plugin:${version}",
+        "land.sungbin:composable.reference.suppressor.plugin:${version}"
     )
 }
 ```
