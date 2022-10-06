@@ -31,8 +31,18 @@ This Kotlin compiler plugin was developed to avoid this limitation.
 | ![maven-central](https://img.shields.io/badge/maven--central-1.0.x-brightgreen) | ![kotlin-compatibility](https://img.shields.io/badge/kotlin%20compatibility-1.7.20-blue) |
 
 ```kotlin
-plugins {
-    id("land.sungbin.composable.reference.suppressor") version "$version"
+repositories {
+    maven {
+        // We need the JB repository to get the Compose Compiler the latest version
+        url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+}
+
+dependencies {
+    add(
+        org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME,
+        "land.sungbin:composable.reference.suppressor.plugin:${version}"
+    )
 }
 ```
 

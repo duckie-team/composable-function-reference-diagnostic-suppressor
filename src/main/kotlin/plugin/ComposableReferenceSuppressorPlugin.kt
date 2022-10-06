@@ -10,15 +10,16 @@ package plugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.maven
 import org.gradle.kotlin.dsl.repositories
 
 class ComposableReferenceSuppressorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
             repositories {
-                maven {
+                maven(
                     url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-                }
+                )
             }
             dependencies {
                 add(
