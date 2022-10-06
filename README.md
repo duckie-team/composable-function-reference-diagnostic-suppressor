@@ -33,7 +33,7 @@ This Kotlin compiler plugin was developed to avoid this limitation.
 ```kotlin
 repositories {
     maven {
-        // we need a dev repository to keep the Compose Compiler always up-to-date.
+        // We need the JB repository to get the Compose Compiler the latest version
         url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
