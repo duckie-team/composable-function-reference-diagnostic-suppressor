@@ -53,7 +53,6 @@ Currently, no IDE support. [[similar issue]](https://github.com/ZacSweers/redact
 So if you try to reference a Composable function, you still get an error in the IDE.
 **But when you actually run the build, it succeeds.**
 
-### Copyright
+### License
 
-This project is licensed under the MIT License.
-Please refer to the [LICENSE file](LICENSE) for details.
+This project is licensed under the MIT License. Please refer to the [LICENSE file](LICENSE) for details.
